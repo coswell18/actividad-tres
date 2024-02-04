@@ -50,21 +50,24 @@
   Se han eliminado los favoritos
 </div>
 <div  class="container text-center mt-5 mb-5">
-  <h1 class="my-5">Listado de los mejores doctores del mercado</h1>
+  <h1 class="my-3">Listado de los mejores doctores del mercado</h1>
   <div class="contenedor-buscar">
-    <div class="input-group flex-nowrap buscar mb-3">
+    <div class="input-group flex-nowrap buscar my-3">
       <span class="input-group-text" id="addon-wrapping">Buscar doctor</span>
       <input type="text" class="form-control " onkeyup="filterUsersName(this)" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
     </div>
   </div>
-  Filtrar por:
-  <button type="button" class="btn btn-primary" onclick="fitlerUsersGender('all')">Todos</button>
-  <button type="button" class="btn btn-warning" onclick="fitlerUsersGender('female')">Mujeres</button>
-  <button type="button" class="btn btn-secondary" onclick="fitlerUsersGender('male')">Hombres</button>
-  --------------
-  Favoritos:
-  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#favoritesModal" onclick="setDataFavorites()">Favoritos</button>
-  <button type="button" class="btn btn-outline-danger" onclick="deleteUserSessionStorage()">Borrar Favoritos</button>
+  <div class="my-4">
+    Filtrar por:
+    <button type="button" class="btn btn-primary" onclick="fitlerUsersGender('all')">Todos</button>
+    <button type="button" class="btn btn-warning" onclick="fitlerUsersGender('female')">Mujeres</button>
+    <button type="button" class="btn btn-secondary" onclick="fitlerUsersGender('male')">Hombres</button>
+    --------------
+    Favoritos:
+    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#favoritesModal" onclick="setDataFavorites()">Favoritos</button>
+    <button type="button" class="btn btn-outline-danger" onclick="deleteUserSessionStorage()">Borrar Favoritos</button>
+
+  </div>
   <div id="container-cards" class="row justify-content-center">
   </div>
 </div>
@@ -97,7 +100,7 @@
         <h5 class="modal-title">Favorito</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body text-center">
         <div id="container-cards-favorites" class="row justify-content-center">
         </div>
       </div>
