@@ -38,7 +38,7 @@ const setDataFavorites = ()=>{
     let favoritesUser = JSON.parse(sessionStorage.getItem("users"))
     if(favoritesUser != null){
         favoritesUser.map(user=>{
-            html += `<div class="card col-12 col-md-4 col-xl-3 m-3 ">
+            html += `<div class="card col-12 col-md-4 col-xl-3 m-3 d-flex align-items-center">
             
                 <img src="${user.picture.large}" class="card-img-top" alt="...">
                 <div class="card-body">
