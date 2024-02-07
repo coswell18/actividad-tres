@@ -1,3 +1,20 @@
+window.onload = function () {
+    
+    if(localStorage.getItem("profile")){
+        const profile = JSON.parse(localStorage.getItem("profile"))
+        document.querySelector("#title-modal").innerHTML = `<b>Hola</b> ${profile.name} ${profile.last_name} !!!`;
+        document.querySelector("#name").innerHTML = `<b>Nombre</b>: ${profile.name}`;
+        document.querySelector("#last_name").innerHTML = `<b>Apellidos</b>: ${profile.last_name}`;
+        document.querySelector("#email").innerHTML = `<b>Correo</b>: ${profile.email}`;
+        document.querySelector("#age").innerHTML = `<b>Edad</b>: ${profile.age}`;
+        document.querySelector("#id").innerHTML = `<b>Cédula</b>: ${profile.id}`;
+        document.querySelector("#gender").innerHTML = `<b>Género</b>: ${profile.gender}`;
+    }else{
+        document.querySelector("#subtitle").innerHTML = `RECUERDA INGRESAR LOS DATOS DE PERFIL DEPUÉS DE INICIAR SESIÓN, <a href="/bienvenido.html">HAZLO ACÁ</a>`;
+    }
+    document.querySelector("#btn-profile").click();
+}
+
 let users = []
 let usersFiltered = []
 let userSelected;
@@ -35,7 +52,8 @@ const setData = (users)=>{
 
 const setDataFavorites = ()=>{
     let html = ``;
-    let favoritesUser = JSON.parse(sessionStorage.getItem("users"))
+    let favoritesUser = JSON.parse(localStorage.getItem("users"))
+    let container = document.getElementById("container-cards-favorites")
     if(favoritesUser != null){
         favoritesUser.map(user=>{
             html += `<div class="card col-12 col-md-4 col-xl-3 m-3 d-flex align-items-center">
@@ -49,10 +67,10 @@ const setDataFavorites = ()=>{
                 </div>
                 </div>`
         }) 
-        let container = document.getElementById("container-cards-favorites")
+        
         container.innerHTML = html;
     } else {
-        console.log("Sin datos")
+        container.innerHTML = "<h2>Aún no ha agregado favoritos</h2>";
     }
 }
 
@@ -82,7 +100,7 @@ const sendUserToModal = (email)=>{
 }
 
 const saveUserSessionStorage = ()=>{
-    let users = sessionStorage.getItem("users");
+    let users = localStorage.getItem("users");
     if(users){
         users = JSON.parse(users);
         users.push(userSelected);
@@ -90,13 +108,13 @@ const saveUserSessionStorage = ()=>{
         users =[];
         users.push(userSelected);
     }
-    sessionStorage.setItem('users',JSON.stringify(users))
+    localStorage.setItem('users',JSON.stringify(users))
 }
 
 const deleteUserSessionStorage = ()=>{
-    let users = sessionStorage.getItem("users");
+    let users = localStorage.getItem("users");
     if(users){
-        sessionStorage.clear("users")
+        localStorage.removeItem("users")
         let container = document.getElementById("container-cards-favorites")
         container.innerHTML = "";
         document.querySelector("#alerta").style.display = "block"
