@@ -165,7 +165,7 @@ align-content: center;
 header{
     width: 100%;
     height: 100vh;
-    background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/infobae/IWRVLPIDZ5DB5F3RDEXATCD42A.jpg);
+    background-image: url(https://www.eschoolnews.com/files/2016/07/technology-tools.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -349,7 +349,6 @@ nav{
     
 }
 
-
 /*sección 3*/
 
 .contenedor{
@@ -360,35 +359,13 @@ nav{
     align-items:center ;
 }
 
-.contenedor .button{
-
-    text-decoration: none;
-    font-size: 15px;
-    color:white;
-    background-color: #1577e7;
-    border-radius: 3px;
-    float: left;
-    position: relative;
-    top: -5px;
-    padding: 5px 10px;
-    transition: .3s ease;
-    font-size: medium;
-
-}
-
-.contenedor .button:hover{
-
-background-color: #ff9900;
-    
-}
-
-    
 .imagen{
     display: block;
     width: 500px;
     float: right;
     border-radius: 10px;
-    margin: 10px;
+    margin-right: 200px;
+    margin-left: 30px;
     
 }
 
@@ -396,21 +373,13 @@ background-color: #ff9900;
 color: #000000;
 }
 
-.contenido .p2{
-
-text-align: justify;
-text-align: center;
-margin-left: 350px ;
-margin-right: 350px;
-margin-bottom: 30px;
+.parrafo{
+    margin-left: 200px;
 }
 
-
-.contenido_2{
-    text-align: center;
-    margin-left: 350px ;
-    margin-right: 350px;
-    margin-bottom: 30px;
+.parrafo-2{
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 
@@ -483,14 +452,14 @@ background-color: #3f3f3f13;
 .pie-pagina .grupo-1 .box figure img{
 
 width: 150px;
- }
+}
 
 .pie-pagina .grupo-1 .box h2{
 
 color:#141414;
 margin: bottom 25px;
 font-size: 20px;
- }
+}
 
 .pie-pagina .grupo-1 .box p{
     color: #333;
@@ -499,27 +468,25 @@ font-size: 20px;
 
 .pie-pagina .grupo-1 .red-social a{
 
-   display: inline-block;
-   text-decoration: none;
-   width: 45px;
-   height: 45px;
-   line-height: 45px;
-   color: #141414;
-   margin-right: 10px;
-   background-color: #64636318;
-   text-align: center;
-   border-radius: 10px;
-   transition: all 300ms ease;
+display: inline-block;
+text-decoration: none;
+width: 45px;
+height: 45px;
+line-height: 45px;
+color: #141414;
+margin-right: 10px;
+background-color: #64636318;
+text-align: center;
+border-radius: 10px;
+transition: all 300ms ease;
 
- }
+}
 
- .pie-pagina .grupo-1 .red-social a:hover{
+.pie-pagina .grupo-1 .red-social a:hover{
 
-   color: #ff6600;
+color: #ff6600;
 
- }
-
-   
+}
 .grupo-2{
 
     background: #141414;
