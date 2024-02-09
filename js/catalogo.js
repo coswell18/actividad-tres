@@ -10,7 +10,7 @@ window.onload = function () {
         document.querySelector("#id").innerHTML = `<b>Cédula</b>: ${profile.id}`;
         document.querySelector("#gender").innerHTML = `<b>Género</b>: ${profile.gender}`;
     }else{
-        document.querySelector("#subtitle").innerHTML = `RECUERDA INGRESAR LOS DATOS DE PERFIL DEPUÉS DE INICIAR SESIÓN, <a href="/bienvenido.html">HAZLO ACÁ</a>`;
+        document.querySelector("#subtitle").innerHTML = `RECUERDA INGRESAR LOS DATOS DE PERFIL DEPUÉS DE INICIAR SESIÓN, <a href="bienvenido.html">HAZLO ACÁ</a>`;
     }
     document.querySelector("#btn-profile").click();
 }
