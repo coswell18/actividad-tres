@@ -1,20 +1,3 @@
-window.onload = function () {
-    
-    if(localStorage.getItem("profile")){
-        const profile = JSON.parse(localStorage.getItem("profile"))
-        document.querySelector("#title-modal").innerHTML = `<b>Hola</b> ${profile.name} ${profile.last_name} !!!`;
-        document.querySelector("#name").innerHTML = `<b>Nombre</b>: ${profile.name}`;
-        document.querySelector("#last_name").innerHTML = `<b>Apellidos</b>: ${profile.last_name}`;
-        document.querySelector("#email").innerHTML = `<b>Correo</b>: ${profile.email}`;
-        document.querySelector("#age").innerHTML = `<b>Edad</b>: ${profile.age}`;
-        document.querySelector("#id").innerHTML = `<b>Cédula</b>: ${profile.id}`;
-        document.querySelector("#gender").innerHTML = `<b>Género</b>: ${profile.gender}`;
-    }else{
-        document.querySelector("#subtitle").innerHTML = `RECUERDA INGRESAR LOS DATOS DE PERFIL DEPUÉS DE INICIAR SESIÓN, <a href="/bienvenido.html">HAZLO ACÁ</a>`;
-    }
-    document.querySelector("#btn-profile").click();
-}
-
 let users = []
 let usersFiltered = []
 let userSelected;
